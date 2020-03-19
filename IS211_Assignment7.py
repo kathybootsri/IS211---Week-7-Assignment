@@ -43,7 +43,7 @@ class Pig():
             print(f'{current_player}, would you like to roll or hold?')
             move = input()
             
-            if move == 'roll' and current_score < 100:
+            if move == 'r' and current_score < 100:
                 if roll != 1:               
                     player_scores[current_player].append(roll)    
                     current_score = sum(player_scores[current_player])
@@ -61,7 +61,7 @@ class Pig():
                     else:
                         start_player += 1 
                     
-            elif move == 'hold':                       
+            elif move == 'h':                       
                 print (f"{current_player} wants to hold. Next player rolls.")
                 if start_player + 1 > player_count - 1:
                     start_player = 0
